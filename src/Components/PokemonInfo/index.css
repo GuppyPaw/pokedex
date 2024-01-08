@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Pokemon Solid';
+    src: url('../../assets/Fonts/Pokemon Solid.ttf');
+}
+
+.PokeInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 64vw;
+    height: 98vh;
+    position: sticky;
+    border-radius: 5px;
+    top: 0px;
+}
+
+.PokeInfo img {
+    transform: scale(2.2);
+}
+
+.WhosThatPkmn {
+    text-align: center;
+    font-family: 'Pokemon Solid';
+    font-size: 36px;
+}

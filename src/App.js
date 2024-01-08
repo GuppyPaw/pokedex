@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState} from 'react';
+import { getAllPokemon } from './Server/Pokemon';
+import PokedexList from './PokedexList'
+import PokemonInfo from './Components/PokemonInfo'
+import TopBar from './Components/TopBar'
 
 function App() {
+
+  const [pokemonList, setPokemonList] = useState([]);
+  const [pokeSprite, setPokeSprite] = useState('');
+  const [pokeSpriteShiny, setPokeSpriteShiny] = useState('');
+
+  useEffect(() => {
+    getPokedexData();
+  }, []);
+
+  const getPokedexData = async() => {
+    await getAllPokemon()
+      .then(({data}) =>
+      {
+        setPokemonList(data.list);
+      })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBar/>
+      <div className='Content'>
+        <PokedexList pokemonList={pokemonList} setPokeSprite={setPokeSprite} setPokeSpriteShiny={setPokeSpriteShiny}/>
+        <PokemonInfo pokeSprite={pokeSprite} pokeSpriteShiny={pokeSpriteShiny}/>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,33 @@
+.Container {
+    display: flex;
+    height: 80px;
+    width: 100vw;
+    background: #6f6f7b;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    overflow-x: hidden;
+}
+
+.Container h1 {
+    color: #424247;
+    font-size: 36px;
+}
+
+.Container button {
+    height: 60px;
+    width: 60px;
+    color: #424247;
+    font-size: 36px;
+    background: transparent;
+    border: transparent;
+}
+
+.Container button:hover {
+    color: #fff;
+}
+
+.Container button:active {
+    color: #bebebe;
+}
