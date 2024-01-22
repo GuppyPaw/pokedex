@@ -11,6 +11,21 @@ export const getAllPokemon = () => {
                       name
                       id
                       is_default
+                      height
+                      pokemon_v2_pokemonspecy {
+                        generation_id
+                        is_baby
+                        is_legendary
+                        is_mythical
+                        pokemon_v2_evolutionchain {
+                          id
+                        }
+                      }
+                      pokemon_v2_pokemontypes {
+                        pokemon_v2_type {
+                          name
+                        }
+                      }
                       pokemon_v2_pokemonsprites {
                         sprites
                       }

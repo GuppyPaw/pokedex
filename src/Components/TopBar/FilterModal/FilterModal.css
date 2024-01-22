@@ -1,0 +1,65 @@
+.ModalBody {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #6f6f7b;
+    box-shadow: 24;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.ModalBody .TypeTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+
+    &.Mui-focused {
+        color: white;
+    }
+}
+
+.ModalBody .TypeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ModalBody .TypeLabel{
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-right: 15px;
+}
+
+.ModalBody .TypeRadio {
+    color: white;
+
+    &.Mui-checked {
+        color: white;
+    }
+}
+
+.ModalBody .TypeButtonContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.ModalBody .TypeButton {
+    color: white;
+    width: min-content;
+    font-size: 16px;
+    background: #51515a;
+    margin-right: 10px;
+    font-weight: bold;
+
+    &:hover {
+        background: #656570;
+    }
+}

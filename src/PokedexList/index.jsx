@@ -1,20 +1,19 @@
-import PokemonCard from "./PokemonCard";
+import PokemonCard from "./PokemonCard/PokemonCard";
 import './index.css'
 
 const PokedexList = (props) => {
 
-    const {pokemonList, setPokeSprite, setPokeSpriteShiny} = props;
+    const {pokemonList, setSelectedPokemon, setPokeSprite, setPokeSpriteShiny} = props;
 
     return(
         <div className="PokeList">
             {pokemonList.map((pokemon)=>
-            <PokemonCard 
-            id={pokemon.id} 
+            <PokemonCard
+            key={pokemon.id} 
             setPokeSprite={setPokeSprite}
             setPokeSpriteShiny={setPokeSpriteShiny} 
-            name={pokemon.name} 
-            pokemonSprite={JSON.parse(pokemon.pokemon_v2_pokemonsprites[0].sprites).front_default}
-            pokemonSpriteShiny={JSON.parse(pokemon.pokemon_v2_pokemonsprites[0].sprites).front_shiny}/>)}
+            pokemon={pokemon} 
+            setSelectedPokemon={setSelectedPokemon}/>)}
         </div>
     )
 }

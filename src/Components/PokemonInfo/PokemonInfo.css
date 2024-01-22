@@ -25,3 +25,9 @@
     font-family: 'Pokemon Solid';
     font-size: 36px;
 }
+
+.PokeInfo .options {
+    left: 10px;
+    bottom: 0;
+    position: absolute;
+}
