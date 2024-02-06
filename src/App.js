@@ -36,7 +36,8 @@ function App() {
         setSelectedPokemon={setSelectedPokemon} 
         pokemonList={pokemonList} 
         setPokeSprite={setPokeSprite} 
-        setPokeSpriteShiny={setPokeSpriteShiny}/>
+        setPokeSpriteShiny={setPokeSpriteShiny}
+        />
         <PokemonInfo 
         selectedPokemon={selectedPokemon}
         pokeSprite={pokeSprite} 
